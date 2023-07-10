@@ -4,10 +4,13 @@ import Hello from "./Hello";
 
 export default {
   title: "components|basic/Hello", // 스토리북에서 보여질 그룹과 경로를 명시
-  component: Hello, // 어떤 컴포넌트를 문서화 할지 명시, 여기선 Hello.js
-};
+  component: Hello, // 어떤 컴포넌트를 문서화 할지 명시
 
-export const standard = () => (
+  parameters: {
+    componentSubtitle: '"안녕하세요"라고 보여주는 컴포넌트',
+  },
+};
+export const standard = ({title}) => (
   <Hello
     name="Storybook"
     onHello={action("hello clicked")}
